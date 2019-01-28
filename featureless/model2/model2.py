@@ -112,7 +112,7 @@ def run(max_num_of_epoch=20, batch_size=128):
     model.save_weights("cnn_lstm_model.h5")
     print("Saved model to disk")
 
-    """--------------------------------------Save Model -----------------------------------------
+    """--------------------------------------load Model -----------------------------------------
 
     #loading model
     # load json and create model

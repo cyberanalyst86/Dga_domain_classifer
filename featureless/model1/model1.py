@@ -57,7 +57,7 @@ def read_csv_file():
     dga_data = csv.reader(dga_csv)
     next(dga_data)
 
-    benign_csv = open('E://dga_data//alexa_1mil_with_header.csv', encoding="utf8")
+    benign_csv = open('E://dga_data//alexa_1mil_with_header_reduced.csv', encoding="utf8")
     benign_data = csv.reader(benign_csv)
     next(benign_data)
 
@@ -151,7 +151,7 @@ def run(max_num_of_epoch=20, batch_size=128):
     print('Test accuarcy: %0.4f%%' % (score[1] * 100))
 
     """--------------------------------------Save Model -----------------------------------------"""
-
+    """
     # serialize model to JSON
     model_json = model.to_json()
     with open("cnn_lstm_model.json", "w") as json_file:
@@ -159,8 +159,8 @@ def run(max_num_of_epoch=20, batch_size=128):
     # serialize weights to HDF5
     model.save_weights("cnn_lstm_model.h5")
     print("Saved model to disk")
-
-    """--------------------------------------load Model -----------------------------------------
+    """
+    """--------------------------------------Save Model -----------------------------------------
 
     #loading model
     # load json and create model
